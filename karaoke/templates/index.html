@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script defer src="{% static 'js/script.js' %}"><</script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nomes:</h1>
+    {% if not vazio %}
+        <ul>
+        {% for i in nomes %}
+            <li>{{i}}</li>
+        {% endfor %}
+        </ul>
+        {% else%}
+            <p>Não há nomes cadastrados</p>
+        {% endif %}
+</body>
+</html>
